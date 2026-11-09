@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "asset": "iasi-cinema.webp",
+  "sourceSha256": "442d6656926b1349aa60da634450112050a97ccc674060122b4c876d53557cc9",
+  "sourceType": "ai-generated",
+  "generator": "OpenAI ImageGen",
+  "generatedAt": "2026-10-06",
+  "promptFile": "iasi-cinema.prompt.txt",
+  "seed": null,
+  "seedStatus": "not exposed",
+  "intendedUse": "Illustrative generic cinema recommendation for the Iași seed experience",
+  "creditLine": "AI-generated illustrative image"
+}

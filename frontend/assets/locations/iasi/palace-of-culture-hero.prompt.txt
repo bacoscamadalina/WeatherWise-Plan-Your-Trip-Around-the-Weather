@@ -1,0 +1,8 @@
+Use case: photorealistic-natural
+Asset type: responsive weather app hero photograph, ultra-wide landscape crop
+Primary request: Create a luminous, realistic editorial panorama of Iași, Romania, centered on the Palace of Culture as the unmistakable local landmark, with its neo-Gothic architecture accurately recognizable, viewed across a refined city garden with flowering trees.
+Scene/backdrop: early autumn clear-to-partly-cloudy morning, open pale-blue sky with warm sunlight and atmospheric depth.
+Composition/framing: 21:9 panoramic composition; landmark occupies the right half; generous calm negative space on the left for large weather typography; low horizon; no people close to camera.
+Lighting/mood: optimistic golden daylight, premium European travel editorial, natural color and believable texture.
+Color palette: ivory sunlight, atlas blue sky, muted green foliage, restrained pink flowers.
+Constraints: no text, no logos, no watermark, no UI, no fantasy architecture, no duplicated towers, no severe lens distortion.

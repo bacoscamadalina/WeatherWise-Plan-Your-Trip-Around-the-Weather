@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "asset": "palace-of-culture-hero.jpg",
+  "sourceSha256": "9d1eb8b2f4c9e567165465857e9ff0fbb4438224e8ac60c75a8a6a4f095a6816",
+  "sourceType": "ai-generated",
+  "generator": "OpenAI ImageGen",
+  "generatedAt": "2026-10-06",
+  "promptFile": "palace-of-culture-hero.prompt.txt",
+  "seedStatus": "not exposed",
+  "intendedUse": "Location-symbolic Iași hero; illustrative, not documentary",
+  "creditLine": "AI-generated illustrative image"
+}

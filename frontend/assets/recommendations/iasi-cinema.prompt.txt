@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: weather app recommendation card photograph
+Primary request: Create a premium realistic editorial photograph of a modern cinema auditorium in Iași, Romania, with deep navy upholstered seats, a glowing wide screen showing an abstract snowy landscape with no titles, and warm amber aisle lights.
+Composition/framing: wide 4:3 landscape from the back-center, balanced perspective, visually rich but clean, space for a small red category badge top-left.
+Lighting/mood: cozy inviting evening atmosphere, cinematic contrast, tasteful and modern.
+Color palette: midnight blue, warm amber, a little coral accent.
+Constraints: no people, no readable text, no logos, no watermark, no movie posters or copyrighted characters.

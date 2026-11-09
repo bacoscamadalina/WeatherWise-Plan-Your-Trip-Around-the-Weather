@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "asset": "iasi-botanical-garden.webp",
+  "sourceSha256": "dcfc5f4694ea307621a3709766e07f43316aedf356b1a9788fa3deb2ff33cb9a",
+  "sourceType": "ai-generated",
+  "generator": "OpenAI ImageGen",
+  "generatedAt": "2026-10-06",
+  "promptFile": "iasi-botanical-garden.prompt.txt",
+  "seed": null,
+  "seedStatus": "not exposed",
+  "intendedUse": "Illustrative Iași Botanical Garden recommendation",
+  "creditLine": "AI-generated illustrative image"
+}

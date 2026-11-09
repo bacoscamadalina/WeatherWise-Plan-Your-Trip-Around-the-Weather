@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: weather app recommendation card photograph
+Primary request: Create a realistic editorial photograph of the Botanical Garden in Iași, Romania, represented by a beautiful historic glass greenhouse interior filled with palms, lush tropical plants, stone paths and warm daylight.
+Composition/framing: wide 4:3 landscape, inviting path leading inward, enough visual calm for a small category badge in the top-left.
+Lighting/mood: bright clean late-morning light, peaceful, fresh, aspirational but believable.
+Color palette: rich botanical greens, warm glasshouse ivory, subtle teal shadows.
+Constraints: no people in foreground, no text, no logos, no watermark, no surreal plants.

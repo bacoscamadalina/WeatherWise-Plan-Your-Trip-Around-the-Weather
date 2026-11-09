@@ -1,0 +1,7 @@
+{
+  "approved": true,
+  "approvedAt": "2026-10-06",
+  "direction": "Atlas de lumină",
+  "promptFile": "atlas-de-lumina.prompt.txt",
+  "source": "Built-in ImageGen direction comp explicitly selected by the user"
+}

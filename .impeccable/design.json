@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T15:20:23Z",
+  "title": "Design System: Atlas de lumină",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "plan-handoff",
+        "value": "0 10px 24px rgba(94, 109, 101, 0.11)",
+        "purpose": "Soft ambient lift for the plan strip above the daylight field."
+      },
+      {
+        "name": "trend-paper",
+        "value": "0 8px 22px rgba(94, 109, 101, 0.06)",
+        "purpose": "Quiet paper lift for the trend surface."
+      }
+    ],
+    "motion": [
+      {
+        "name": "content-swap",
+        "value": "220-420ms ease-out cubic",
+        "purpose": "Finite selection and content transitions; resolve instantly when reduced motion is requested."
+      },
+      {
+        "name": "first-entrance-atmosphere",
+        "value": "900ms",
+        "purpose": "One non-looping atmosphere drawing on first entrance only."
+      }
+    ],
+    "breakpoints": [
+      { "name": "hero-stack", "value": "520px" },
+      { "name": "trend-stack", "value": "600px" },
+      { "name": "recommendations-two-column", "value": "620px" },
+      { "name": "navigation-stack", "value": "720px" },
+      { "name": "plan-strip-row", "value": "760px" },
+      { "name": "trip-planner-form-row", "value": "860px" },
+      { "name": "recommendations-three-column", "value": "920px" }
+    ],
+    "mediaPolicy": {
+      "hero": "Use attributed, location-specific hero photography. Never substitute another locality's landmark.",
+      "recommendations": "Provider imagery is the first choice in both the day-plan strip and recommendation gallery; use a locality-safe curated asset or deterministic authored artwork only when provider media is unavailable.",
+      "iasiFallback": "Use the clearly labeled generated Iași panorama and recommendation assets for the offline seed experience; never imply that they are documentary photography."
+    }
+  },
+  "components": [
+    {
+      "name": "Plan Action",
+      "kind": "button",
+      "refersTo": "plan-action",
+      "description": "The single golden primary action for the selected day's plan.",
+      "html": "<button class=\"ds-plan-action\">Plan this day</button>",
+      "css": ".ds-plan-action { min-height: 48px; padding: 15px 24px; border: 0; border-radius: 14px; background: #FFC94A; color: #153A59; font: 700 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; transition: filter 180ms ease, transform 180ms ease; } .ds-plan-action:hover { filter: brightness(0.97); transform: translateY(-1px); } .ds-plan-action:focus-visible { outline: 3px solid #168AAD; outline-offset: 3px; } .ds-plan-action:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Location Search",
+      "kind": "input",
+      "refersTo": "location-search",
+      "description": "Opaque paper search field for global place discovery.",
+      "html": "<input class=\"ds-location-search\" type=\"search\" value=\"Iași\" aria-label=\"Search for a place\">",
+      "css": ".ds-location-search { width: min(100%, 500px); height: 54px; padding: 0 16px; border: 1px solid #DCE4E2; border-radius: 14px; background: rgba(255, 255, 255, 0.94); color: #153A59; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-location-search:hover { border-color: #91A6B4; } .ds-location-search:focus-visible { border-color: #168AAD; outline: none; box-shadow: 0 0 0 3px rgba(22, 138, 173, 0.2); }"
+    },
+    {
+      "name": "Plan Strip",
+      "kind": "card",
+      "refersTo": "plan-strip",
+      "description": "The white handoff from forecast facts to the best provider-backed plan.",
+      "html": "<section class=\"ds-plan-strip\"><strong>Best plan</strong><span>Local idea matched to this forecast</span></section>",
+      "css": ".ds-plan-strip { display: flex; gap: 12px; align-items: center; padding: 18px 16px 18px 20px; border: 1px solid #DCE4E2; border-radius: 14px; background: rgba(255, 254, 251, 0.97); color: #153A59; box-shadow: 0 10px 24px rgba(94, 109, 101, 0.11); font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-plan-strip strong { font-weight: 700; } .ds-plan-strip:focus-within { outline: 3px solid rgba(22, 138, 173, 0.35); outline-offset: 3px; }"
+    },
+    {
+      "name": "Forecast Tab",
+      "kind": "custom",
+      "refersTo": "forecast-tab",
+      "description": "A chromatic atlas-index card for one forecast day.",
+      "html": "<button class=\"ds-forecast-tab\"><strong>Today</strong><span>21° / 12°</span></button>",
+      "css": ".ds-forecast-tab { display: grid; gap: 12px; width: 142px; height: 148px; padding: 13px 13px 10px; border: 1px solid #DCE4E2; border-top: 4px solid #168AAD; border-radius: 12px; background: #FFFEFB; color: #153A59; text-align: left; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; transition: border-color 180ms ease, background 180ms ease; } .ds-forecast-tab:hover { background: #D9F1FA; } .ds-forecast-tab:focus-visible { outline: 3px solid #168AAD; outline-offset: 3px; } .ds-forecast-tab:active { background: #FFF1BB; }"
+    },
+    {
+      "name": "Recommendation Card",
+      "kind": "card",
+      "refersTo": "recommendation-card",
+      "description": "Editorial recommendation surface led by attributed provider imagery, with locality-safe illustrative fallback only when needed.",
+      "html": "<article class=\"ds-recommendation-card\"><div class=\"ds-recommendation-media\" aria-label=\"Attributed provider image\"></div><h3>Local idea</h3><p>Matched to the selected day's conditions.</p></article>",
+      "css": ".ds-recommendation-card { overflow: hidden; padding: 12px 8px 12px 14px; border: 1px solid #DCE4E2; border-radius: 14px; background: #FFFEFB; color: #153A59; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; transition: border-color 180ms ease; } .ds-recommendation-card:hover { border-color: #91A6B4; } .ds-recommendation-card:focus-within { outline: 3px solid #168AAD; outline-offset: 3px; } .ds-recommendation-media { height: 184px; margin: -12px -8px 12px -14px; background: linear-gradient(135deg, #D9F1FA, #FFF1BB); } .ds-recommendation-card h3 { margin: 0 0 8px; font: 600 22px/1.25 Georgia, ui-serif, serif; } .ds-recommendation-card p { margin: 0; color: #587083; }"
+    },
+    {
+      "name": "Trip Planner Form",
+      "kind": "custom",
+      "description": "The responsive paper trip form shared by trip creation and saved-trip editing, with inline optional preferences and one gold completion action.",
+      "html": "<form class=\"ds-trip-form\"><div class=\"ds-trip-core\"><label>Dates<input value=\"7–9 October\"></label><label>Travelers<select><option>2 people</option></select></label><label>Daily pace<select><option>Balanced</option></select></label><label>Transport<select><option>Car</option></select></label><label>Exploration radius<input type=\"range\" min=\"5\" max=\"50\" step=\"5\" value=\"50\"><strong>50 km</strong></label></div><section class=\"ds-trip-preferences\" aria-labelledby=\"ds-preferences-title\"><div class=\"ds-trip-preferences-intro\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6\"/></svg><div><strong id=\"ds-preferences-title\">Personalize your route</strong><span>Optional. We will favor activities and venues that fit your style.</span></div></div><fieldset><legend>Your interests</legend><div class=\"ds-chip-wrap\"><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 20h16M6 17h12M7 17V9h10v8M9 9V6h6v3M10 13h4\"/></svg>Culture</button><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M12 21V9M6 12c0-4 2-7 6-9 4 2 6 5 6 9a6 6 0 0 1-12 0Z\"/></svg>Nature</button><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 6h16v12H4zM8 10h.01M16 10h.01M8 15c2 1.5 6 1.5 8 0\"/></svg>Entertainment</button></div></fieldset><fieldset><legend>Dietary preferences</legend><div class=\"ds-chip-wrap\"><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M19 4C12 4 6 8 6 15c5 0 9-3 13-11ZM6 15c-1 2-1 4-1 5\"/></svg>Vegetarian</button><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"false\">Vegan</button><button type=\"button\" class=\"ds-trip-chip\" role=\"checkbox\" aria-checked=\"false\">Gluten-free</button></div></fieldset><fieldset><legend>Meal budget</legend><div class=\"ds-chip-wrap\"><button type=\"button\" class=\"ds-trip-chip\" role=\"radio\" aria-checked=\"false\">Value</button><button type=\"button\" class=\"ds-trip-chip\" role=\"radio\" aria-checked=\"true\">Moderate</button><button type=\"button\" class=\"ds-trip-chip\" role=\"radio\" aria-checked=\"false\">Flexible</button></div></fieldset><p class=\"ds-trip-honesty\">Results are search matches, not verified menus. Confirm options, ingredients, and cross-contamination directly with the venue.</p></section><button class=\"ds-trip-submit\">Build my plan</button></form>",
+      "css": ".ds-trip-form { display: grid; gap: 20px; padding: 20px; border-radius: 14px; background: #FFFEFB; color: #153A59; box-shadow: 0 10px 24px rgba(94, 109, 101, 0.11); font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-core { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px 14px; } .ds-trip-core label { display: grid; gap: 8px; font-weight: 800; } .ds-trip-core input:not([type=range]), .ds-trip-core select { min-height: 48px; padding: 0 12px; border: 1px solid #DCE4E2; border-radius: 14px; background: #FFFEFB; color: #153A59; font: inherit; } .ds-trip-preferences { display: grid; gap: 14px; padding-top: 20px; border-top: 1px solid #DCE4E2; } .ds-trip-preferences-intro { display: flex; gap: 9px; align-items: flex-start; } .ds-trip-preferences-intro > svg { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: #168AAD; stroke-width: 1.8; stroke-linecap: round; } .ds-trip-preferences-intro div { display: grid; gap: 5px; } .ds-trip-preferences-intro strong { font-size: 16px; font-weight: 800; } .ds-trip-preferences-intro span, .ds-trip-honesty { color: #587083; } .ds-trip-preferences fieldset { display: grid; gap: 7px; min-width: 0; margin: 0; padding: 0; border: 0; } .ds-trip-preferences legend { margin-bottom: 7px; padding: 0; font-weight: 700; } .ds-chip-wrap { display: flex; flex-wrap: wrap; gap: 8px; } .ds-trip-chip { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 0 14px; border: 1px solid #DCE4E2; border-radius: 10px; background: #FFFEFB; color: #153A59; font: 700 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-chip svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-trip-chip[aria-checked=true] { border-color: #168AAD; background: #D9F1FA; } .ds-trip-chip:hover { border-color: #91A6B4; } .ds-trip-chip:focus-visible, .ds-trip-core input:focus-visible, .ds-trip-core select:focus-visible, .ds-trip-submit:focus-visible { outline: 3px solid #168AAD; outline-offset: 3px; } .ds-trip-honesty { margin: -4px 0 0; font-size: 12px; } .ds-trip-submit { justify-self: end; min-height: 48px; padding: 0 24px; border: 0; border-radius: 14px; background: #FFC94A; color: #153A59; font: 700 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-submit:hover { filter: brightness(0.97); } .ds-trip-chip:active, .ds-trip-submit:active { transform: translateY(1px); } @media (max-width: 1039px) { .ds-trip-core { grid-template-columns: 1fr; } .ds-trip-submit { justify-self: stretch; } }"
+    },
+    {
+      "name": "Trip Day Timeline",
+      "kind": "custom",
+      "description": "One chronological day surface with a persistent time rail and provider-truthful metadata.",
+      "html": "<section class=\"ds-trip-day\"><h3>Day 1 <span>7 October</span></h3><article><time>08:30</time><i aria-hidden=\"true\">☕</i><div><b>BREAKFAST</b><strong>Harmony Café</strong><small>Source: Google Places</small><span aria-label=\"Rating 4.7 out of 5, 312 reviews\">★ 4.7 (312) · 1.2 km</span></div></article></section>",
+      "css": ".ds-trip-day { padding: 20px; border: 1px solid #DCE4E2; border-radius: 14px; background: #FFFEFB; color: #153A59; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-day h3 { margin: 0 0 18px; font: 600 22px/1.25 Georgia, ui-serif, serif; } .ds-trip-day h3 span { margin-left: 12px; color: #587083; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-day article { display: grid; grid-template-columns: 58px 34px minmax(0, 1fr); gap: 12px; align-items: start; } .ds-trip-day time { padding-top: 8px; color: #587083; font-variant-numeric: tabular-nums; font-weight: 700; } .ds-trip-day i { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #FFF1BB; color: #197B73; font-style: normal; } .ds-trip-day article div { display: grid; gap: 4px; min-width: 0; } .ds-trip-day b { color: #197B73; font-size: 12px; } .ds-trip-day strong { font-weight: 700; } .ds-trip-day small { color: #587083; font-weight: 700; } .ds-trip-day span { font-weight: 700; } .ds-trip-day:focus-within { outline: 3px solid rgba(22, 138, 173, 0.35); outline-offset: 3px; }"
+    },
+    {
+      "name": "Account Panel",
+      "kind": "input",
+      "refersTo": "account-panel",
+      "description": "A focused paper form shared by sign-in and account creation, with an explicit inline failure state.",
+      "html": "<form class=\"ds-account-panel\"><div class=\"ds-account-mode\" role=\"group\" aria-label=\"Account mode\"><button type=\"button\" aria-pressed=\"true\">Sign in</button><button type=\"button\" aria-pressed=\"false\">Create account</button></div><label>Email<input type=\"email\" autocomplete=\"email\"></label><label>Password<input type=\"password\" autocomplete=\"current-password\"></label><p class=\"ds-account-error\" role=\"alert\" hidden>Check your details and try again.</p><button class=\"ds-account-submit\" type=\"submit\">Sign in</button></form>",
+      "css": ".ds-account-panel { display: grid; gap: 14px; width: min(100%, 520px); padding: 24px; border-radius: 14px; background: #FFFEFB; color: #153A59; box-shadow: 0 10px 24px rgba(94, 109, 101, 0.11); font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-account-mode { display: grid; grid-template-columns: 1fr 1fr; min-height: 48px; padding: 4px; border: 1px solid #DCE4E2; border-radius: 14px; } .ds-account-mode button { border: 0; border-radius: 10px; background: transparent; color: #153A59; font: 700 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-account-mode button[aria-pressed=true] { background: #D9F1FA; } .ds-account-panel label { display: grid; gap: 7px; font-weight: 700; } .ds-account-panel input { min-height: 48px; padding: 0 14px; border: 1px solid #DCE4E2; border-radius: 14px; background: #FFFEFB; color: #153A59; font: inherit; } .ds-account-submit { min-height: 48px; border: 0; border-radius: 14px; background: #FFC94A; color: #153A59; font: 700 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-account-error { margin: 2px 0; padding: 12px; border-radius: 12px; background: #FFDAD6; color: #410002; } .ds-account-panel button:hover { filter: brightness(0.97); } .ds-account-panel button:active { transform: translateY(1px); } .ds-account-panel input:focus-visible, .ds-account-panel button:focus-visible { outline: 3px solid #168AAD; outline-offset: 3px; }"
+    },
+    {
+      "name": "Personal Trip Row",
+      "kind": "nav",
+      "refersTo": "trip-library-row",
+      "description": "A full-row trip destination with separate labeled deletion and naturally wrapping metadata.",
+      "html": "<article class=\"ds-trip-row\"><button class=\"ds-trip-open\"><span class=\"ds-trip-medallion\" aria-hidden=\"true\">↝</span><span><strong>Autumn in Iași</strong><small>Iași, Romania · 7.10.2026–9.10.2026</small></span><span aria-hidden=\"true\">›</span></button><button class=\"ds-trip-delete\" aria-label=\"Delete Autumn in Iași\">×</button></article>",
+      "css": ".ds-trip-row { position: relative; display: flex; align-items: stretch; border: 1px solid #DCE4E2; border-radius: 14px; background: #FFFEFB; color: #153A59; overflow: hidden; font: 400 14px/1.42 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-trip-open { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 14px; align-items: center; min-width: 0; flex: 1; padding: 18px 100px 18px 18px; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; } .ds-trip-open > span:nth-child(2) { display: grid; gap: 4px; min-width: 0; } .ds-trip-open strong { font-weight: 700; } .ds-trip-open small { color: #587083; white-space: normal; } .ds-trip-medallion { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #FFF1BB; font-size: 20px; } .ds-trip-delete { position: absolute; right: 42px; top: 50%; width: 44px; height: 44px; transform: translateY(-50%); border: 0; border-radius: 50%; background: transparent; color: #153A59; font-size: 22px; } .ds-trip-row:hover { border-color: #91A6B4; } .ds-trip-open:focus-visible, .ds-trip-delete:focus-visible { outline: 3px solid #168AAD; outline-offset: -3px; } .ds-trip-open:active, .ds-trip-delete:active { background: #D9F1FA; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Atlas de lumină",
+    "overview": "WeatherWise is a bright European travel atlas, not a dark weather dashboard. A quiet paper navigation row opens into an asymmetric daylight field: editorial temperature, precise weather narrative, a broad cartographic arc, a condition-aware sky, and one white planning strip. The sequence is deliberate—search a place, read its daylight story, scan chromatic forecast tabs, then open one practical plan. Warm ivory paper and atlas-blue ink establish calm authority. Azure rules, golden daylight, coral and mint accents add optimism without turning the interface into a generic dashboard grid. Display weather and section titles use bookish Georgia with the platform serif fallback; controls, dense facts, and explanatory copy use the platform system sans. Material 3 and native navigation behavior remain the interaction foundation. The approved direction is `.impeccable/mocks/decision/atlas-de-lumina.png`, selected on 2026-10-06 from built-in ImageGen exploration and recorded by its adjacent prompt and JSON sidecar. Direction seed `97c9e211` is the reproducibility key. The implemented visual truth is `frontend/lib/theme/atlas_theme.dart` plus the home and trip-planner surfaces; `.impeccable/review/desktop.png` (1280×720), `.impeccable/review/mobile.png` (390×844), and the `trip-planner-result-{desktop,mobile}.png` captures are the shipped review evidence. Disposition: **SHIP**. Preserve this system rather than merging it with the retired Forecast Focus identity.",
+    "keyCharacteristics": [
+      "Bright paper navigation and an authored, condition-aware daylight field.",
+      "Editorial serif temperature and headings paired with highly legible system sans UI.",
+      "One white plan strip as the bridge between forecast facts and recommendations.",
+      "Chromatic forecast tabs that behave like an atlas index, not a stack of cards.",
+      "Fine map-like rules, tabular numerals, restrained depth, and generous whitespace.",
+      "Location-symbolic hero photography and real recommendation media, with attributed provider imagery and clearly labeled illustrative seed assets.",
+      "Finite fade-and-slide state changes that become instant when reduced motion is requested.",
+      "Complete English/Romanian copy may wrap without changing hierarchy or discarding state.",
+      "A responsive trip-planner form resolves into a quiet, provider-attributed day timeline without inventing certainty, availability, or quality.",
+      "Account access and the personal trip library extend the same daylight-and-paper system with explicit restoring, busy, empty, error, and destructive states."
+    ],
+    "rules": [
+      { "name": "The Daylight Owns the Canvas Rule", "body": "Ivory and paper remain dominant; weather color changes the atmosphere and tab accent, not the entire planning stream.", "section": "colors" },
+      { "name": "The One Golden Action Rule", "body": "Gold identifies the primary next step for the selected day. Do not spend it on generic decoration or several equal actions.", "section": "colors" },
+      { "name": "The Semantic Weather Rule", "body": "Forecast states always pair color with icon, label, border, or selection semantics; color alone never carries meaning.", "section": "colors" },
+      { "name": "The Editorial-Utility Split Rule", "body": "Georgia is for the weather story and object titles; system sans is for interaction, dense facts, and operational copy.", "section": "typography" },
+      { "name": "The Forecast First Rule", "body": "Temperature owns display scale. Preserve its visual priority even when Romanian copy or large text increases surrounding height.", "section": "typography" },
+      { "name": "The Action Labels Stay Sans Rule", "body": "Every actionable label—including trip creation, retry, date picking, dropdowns, and linked itinerary rows—uses the platform system sans at a decisive weight. Never inherit Georgia merely because the action sits beside an editorial heading.", "section": "typography" },
+      { "name": "The Same Story, New Measure Rule", "body": "Responsive adaptation changes stacking and column count, never the information order or the plan-strip handoff.", "section": "layout" },
+      { "name": "The Reachable Overlay Rule", "body": "Predictive place results stay anchored over the daylight field without reflowing it; long sheets scroll their variable content while completion actions remain reachable.", "section": "layout" },
+      { "name": "The Chronology Survives Compression Rule", "body": "The trip timeline keeps one top-to-bottom time rail on compact and wide layouts; responsive changes may wrap metadata, but never reorder the day's slots or hide an unfilled period.", "section": "layout" },
+      { "name": "The Paper Before Shadow Rule", "body": "Use separation, line, and tonal contrast first; shadow is reserved for the plan handoff and transient overlays.", "section": "elevation" },
+      { "name": "The No Glass Rule", "body": "Surfaces are opaque or near-opaque paper. Do not introduce blur-heavy glassmorphism.", "section": "elevation" },
+      { "name": "The One Broad Curve Rule", "body": "The daylight field's 24dp lower edge is the signature large curve; downstream content stays within the disciplined 10–16dp family.", "section": "shapes" },
+      { "name": "The Preferences Stay in Context Rule", "body": "Personalization belongs inside the existing trip form, after the core controls and before the one gold action. Use wrapped native chips and conditional provider-honesty copy; never promote optional preferences into a competing card, wizard step, or promise of verified dietary safety.", "section": "components" },
+      { "name": "The Schedule Tells the Truth Rule", "body": "Pace defines the day's actual operating window and activity count. Display contract-provided start/end times, known duration, and routing state consistently from generated result through saved trip. A live route may name duration and distance; a rhythm fallback must say that it is only reserved time. Never invent precision or compress away the free evening promised by Relaxed pace.", "section": "components" },
+      { "name": "The Route Is Evidence Rule", "body": "Show route metadata only for coordinate-backed stops. Distinguish provider-calculated duration and distance from an explicitly approximate, mode-named buffer; omit an unknown leg instead of guessing it, and close every routed day with one return leg from its final located stop.", "section": "components" },
+      { "name": "The State Before Transition Rule", "body": "Account and personal-library surfaces always show whether the session or collection is restoring, busy, empty, failed, or ready before offering the next action; never leave stale content looking current during an unresolved request.", "section": "components" },
+      { "name": "The Complete Replacement Rule", "body": "A saved itinerary remains the trusted visible plan until weather replanning returns a complete replacement. Never clear or partially mutate it during the request; success swaps the whole plan, while failure preserves the prior version and offers a retry.", "section": "components" },
+      { "name": "The One-Stop Swap Rule", "body": "Replacing one saved stop preserves its time, position, and every other stop. Keep the current stop visible until a complete alternative returns; during the request, name the work, show a spinner, and lock competing mutations. After success, restore baseline rhythm times and recalculate route metadata, schedule fit, and the final return leg for the whole day. No-alternative and provider-failure outcomes use distinct copy, preserve the stop, and offer Retry.", "section": "components" }
+    ],
+    "dos": [
+      "Do preserve the daylight-story → plan-strip → forecast-tabs → chart → ideas sequence at every width.",
+      "Do use Georgia for editorial display moments and the system sans for UI and dense facts.",
+      "Do keep ivory and paper dominant, with gold reserved for the primary day-planning action.",
+      "Do keep every available fact in a responsive wrap and use tabular numerals for weather data.",
+      "Do keep search suggestions anchored, reject stale responses, and preserve the full picker for deliberate ambiguity handling.",
+      "Do localize WeatherWise-owned copy in English and Romanian without resetting the active location, selected day, expanded context, filters, plans, profiles, or reminders.",
+      "Do retain provider attribution and clearly distinguish live, demo, cached, and unverified availability states.",
+      "Do clear a rendered trip plan as soon as any plan-defining input or preference changes, then show results only for the submitted dates, pace, transport, radius, interests, dietary intent, and meal budget.",
+      "Do keep trip preferences inline, optional, and wrapped at compact widths; use paper for unselected chips, sky for selected chips, and conditional provider-honesty copy for dietary intent.",
+      "Do explain pace before generation, then preserve its day span, activity count, travel buffer, start/end times, and known durations in both generated and saved plans.",
+      "Do distinguish calculated routes from approximate mode-named buffers, surface schedule adjustments and unresolved conflicts, and preserve the final return leg after a stop replacement.",
+      "Do keep the trip timeline chronological and legible at compact widths, with rating, review count, source, and distance allowed to wrap.",
+      "Do keep account status and personal-trip loading, empty, error, retry, and deletion outcomes explicit, localized, and compatible with native autofill and navigation.",
+      "Do honor reduced motion, safe areas, large text, keyboard reachability, and 48dp Android / 44pt iOS targets."
+    ],
+    "donts": [
+      "Don't revive the dark Forecast Focus palette, teal atmospheric slab, or sans-only identity.",
+      "Don't turn the page into a generic dashboard grid or elevate every object into a card.",
+      "Don't show a landmark from another place, imply that illustrative imagery is documentary, or ship an unattributed raster.",
+      "Don't use the approved comp itself as live geographic evidence; it is directional artwork.",
+      "Don't introduce glassmorphism, gradient text, looping atmosphere motion, or decorative shadows.",
+      "Don't use color alone for weather, selection, availability, warning, or error meaning.",
+      "Don't make loading or fallback plan signals look tappable, or let a stale plan survive a place/day change.",
+      "Don't imply that an account is required for the core forecast flow, expose a private trip before authentication resolves, or delete a trip without confirmation that names it.",
+      "Don't present a provider rating as a WeatherWise score, show a star without its review count, invent a dining rating, or imply that a 50 km radius is the itinerary's total distance.",
+      "Don't place optional trip preferences in nested cards or a separate wizard step, and don't imply that a dietary search match is a verified menu or allergen-safety guarantee.",
+      "Don't invent an exact activity duration, hide a contract-provided end time, or schedule a third activity into the Relaxed pace's free evening.",
+      "Don't guess a route for a coordinate-less stop, present reserved buffer time as provider-calculated travel, or omit an early-departure or walking/bicycle caution when the route requires it.",
+      "Don't translate provider-authored names, descriptions, availability data, URLs, images, or attribution."
+    ]
+  }
+}
