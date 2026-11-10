@@ -6,6 +6,12 @@ WeatherWise turns a weather forecast into a practical travel plan. The user choo
 
 On a sunny day, it may suggest a walk, a hike, or an outdoor attraction. When it rains, the plan adapts with museums, cinemas, and other indoor activities.
 
+## 📸 Application preview
+
+![WeatherWise application showing the weather forecast and a suggested day plan for Iași](.impeccable/review/desktop-photo.png)
+
+<p align="center"><em>WeatherWise turns the forecast into a practical plan for the day.</em></p>
+
 ## ✨ Features
 
 - 🌍 Search for cities and smaller locations worldwide
